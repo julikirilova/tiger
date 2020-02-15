@@ -1,0 +1,319 @@
+
+:root {
+    --head: #f59026;
+    --ears: #f59026;
+    --inner-ears: #fac68f;
+    --hair: rgb(112, 66, 34);
+    --nose: #fac68f;
+    --upper-nose: #df7e16;
+    --circle-nose: rgb(112, 66, 34);
+}
+
+
+body {
+    background-color: rgb(75, 68, 68);
+}
+
+.container {
+    width: 350px;
+    height: 300px;
+    margin: 0 auto;
+
+}
+
+.head {
+    width: 52%;
+    height: 48%;
+    margin: 80px auto;
+    background-color: var(--head);
+    position: relative;
+    border-radius: 30%;
+    
+}
+
+.subhead {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--head);
+    border-radius: 30%;
+    overflow: hidden;
+    
+}
+
+/* EARS */
+
+.left-ear {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    background-color: var(--ears);
+    top: -5%;
+    left: -5%;
+    border-radius: 50%;
+    clip-path: polygon(0 0, 100% 0, 77% 100%, 25% 100%);
+    transform: rotate(-50deg);
+    z-index: -1;
+}
+.right-ear {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    background-color: var(--ears);
+    top: -5%;
+    right: -5%;
+    border-radius: 50%;
+    clip-path: polygon(0 0, 100% 0, 77% 100%, 25% 100%);
+    transform: rotate(50deg);
+    z-index: -1;
+}
+
+
+.left-ear::after {
+    content: '';
+    position: absolute;
+    width: 45%;
+    height: 40%;
+    background-color: var(--inner-ears);
+    top: 15%;
+    left: 28%;
+    border-radius: 50%;
+}
+
+.right-ear::after {
+    content: '';
+    position: absolute;
+    width: 45%;
+    height: 40%;
+    background-color: var(--inner-ears);
+    top: 15%;
+    left: 28%;
+    border-radius: 50%;
+}
+
+
+/* HAIR */
+
+.left-hair {
+    position: absolute;
+    width: 10%;
+    height: 22%;
+    background-color: var(--hair);
+    top: 0px;
+    left: 30%;
+    clip-path: polygon(0 0, 100% 0, 51% 100%, 35% 100%); 
+}
+
+.middle-hair {
+    position: absolute;
+    width: 10%;
+    height: 25%;
+    background-color: var(--hair);
+    top: 0px;
+    left: 45%;
+    clip-path: polygon(0 0, 100% 0, 51% 100%, 35% 100%);
+    z-index: 2;
+}
+
+.right-hair {
+    position: absolute;
+    width: 10%;
+    height: 22%;
+    background-color: var(--hair);
+    top: 0px;
+    left: 60%;
+    clip-path: polygon(0 0, 100% 0, 51% 100%, 35% 100%);
+}
+
+/* CHEEK */
+
+.left-top-cheek {
+    position: absolute;
+    width: 16%;
+    height: 7%;
+    background-color: var(--hair);
+    border-radius: 0 100% 100% 0;
+    top: 40%;
+    left: -5px;
+    transform: rotate(20deg);
+}
+
+.left-middle-cheek {
+    position: absolute;
+    width: 13%;
+    height: 6%;
+    background-color: var(--hair);
+    border-radius: 0 100% 100% 0;
+    left: -5px;
+    top: 53%;
+    transform: rotate(15deg);
+}
+
+.left-bottom-cheek {
+    position: absolute;
+    width: 11%;
+    height: 7%;
+    background-color: var(--hair);
+    border-radius: 0 100% 100% 0;
+    left: -5px;
+    top: 65%;
+    transform: rotate(10deg);
+}
+
+
+.right-top-cheek {
+    position: absolute;
+    width: 16%;
+    height: 7%;
+    background-color: var(--hair);
+    border-radius: 100% 0 0 100%;
+    top: 40%;
+    right: -5px;
+    transform: rotate(-20deg);
+}
+
+.right-middle-cheek {
+    position: absolute;
+    width: 13%;
+    height: 6%;
+    background-color: var(--hair);
+    border-radius: 100% 0 0 100%;
+    right: -5px;
+    top: 53%;
+    transform: rotate(-15deg);
+}
+
+.right-bottom-cheek {
+    position: absolute;
+    width: 11%;
+    height: 7%;
+    background-color: var(--hair);
+    border-radius: 100% 0 0 100%;
+    right: -5px;
+    top: 65%;
+    transform: rotate(-10deg);
+}
+
+/* EYES */
+
+.left-eye {
+    width: 7%;
+    height: 10%;
+    background-color: var(--hair);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+}
+
+.right-eye {
+    width: 7%;
+    height: 10%;
+    background-color: var(--hair);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    right: 30%;
+}
+
+/* NOSE */
+
+.nose {
+    background-color: var(--nose);
+    width: 50%;
+    height: 60%;
+    position: absolute;
+    border-radius: 100%;
+    top: 70%;
+    left: 25%;
+    z-index: 2;
+}
+
+.upper-nose {
+    width: 20%;
+    height: 80%;
+    position: absolute;
+    background-color: var(--upper-nose);
+    left: 40%;
+    border-radius: 0 0 80% 80%;
+}
+
+.circle-nose {
+  background-color: var(--circle-nose);
+  position: absolute;
+  width: 45%;
+  height: 34%;
+  /* border-radius: 5px 5px 100% 100% / 0px 0px 180% 180%; */
+  left: 27%;
+  top: -7px;
+  clip-path: polygon(100% 22%, 100% 60%, 59% 100%, 48% 100%, 0% 60%, 0 23%);
+  border-radius: 100%;
+}
+
+
+.moustache-top-left {
+    position: absolute;
+    width: 38px;
+    height: 4%;
+    background-color: var(--hair);
+    border-radius: 100% 0 0 100%;
+    top: 20%;
+    left: -5px;
+    transform: rotate(15deg);
+}
+
+.moustache-bottom-left {
+    position: absolute;
+    width: 48px;
+    height: 3px;
+    background-color: var(--hair);
+    border-radius: 100% 0 0 100%;
+    top: 30%;
+    left: -15px;
+    transform: rotate(-5deg);
+  
+}
+
+.moustache-top-right {
+    position: absolute;
+    width: 38px;
+    height: 4%;
+    background-color: var(--hair);
+    border-radius: 100% 0 0 100%;
+    top: 20%;
+    right: -5px;
+    transform: rotate(-15deg);
+}
+
+.moustache-bottom-right {
+    position: absolute;
+    width: 48px;
+    height: 3px;
+    background-color: var(--hair);
+    border-radius: 100% 0 0 100%;
+    top: 30%;
+    right: -15px;
+    transform: rotate(5deg);
+}
+
+.mouth {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    left: 50%;
+    background-color: transparent;
+    border-radius: 10px;
+    border-bottom: 5px solid var(--hair);
+    top: 10%;
+    left: 35%;
+}
+
+.mouth-vertical {
+    position: absolute;
+    width: 5px;
+    height: 15px;
+    left: 50%;
+    background-color: var(--hair);
+    top: 20%;
+    left: 48%;
+}
